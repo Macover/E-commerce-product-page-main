@@ -28,36 +28,41 @@ p{
     width: 100%;
     height: 80px;
     display: flex;    
-    border: 1px solid black;
-    background-color: aqua;    
+    border-bottom: 1px solid var(--nGrayishBlue);    
 }
-.nav__logo{    
-    background-color: blue;    
+.nav__logo-container{               
     flex-grow: 1;
-    margin:auto 0;
-    display: inline-block;
+    margin:auto 0;    
 }
 .nav__list{
     box-sizing: border-box;
     height: 100%;
-    flex-grow: 8;
-    background-color: saddlebrown;           
+    flex-grow: 10;    
 }
 .nav__list li{      
     list-style-type: none;
-    height: 100%;      
-    background-color: firebrick;
-    font-size: 20px;    
+    height: 100%;          
+    font-size: 18px;    
     display: inline-flex;
     margin: 0 5px;
+    /* animation: animationButton 1s forwards; */
 }
 .nav__list li a{
     text-decoration: none;
     margin: auto 0;
+    color: var(--nDrkGrayishBlue);
 }
-.nav__list li:hover{
-    border-bottom: 3px solid var(--pOrange);
+.nav__list li:hover{   
+    border-bottom: 3px solid var(--pOrange);    
 }
+/* @keyframes animationBottom {
+    from{
+        border-bottom-width: 10%;
+    }
+    to{
+        border-bottom-width: 100%;
+    }
+} */
 
 
 
