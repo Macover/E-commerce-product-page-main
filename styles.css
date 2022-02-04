@@ -11,6 +11,9 @@ body{
 p{
     font-size: 16px;
 }
+button{
+    outline-color: var(--pOrange);
+}
 
 /* 840px to tablets */
 
@@ -27,36 +30,50 @@ p{
     --nWhite : hsl(0, 0%, 100%);
     --nBlack : hsl(0, 0%, 0%);
 }
-.nav{    
-    width: 100%;
-    height: 80px;
+.container__nav{
+    width: 100%;    
+    height: 70px;        
     display: flex;    
+    justify-content: center;    
+    padding-top: 10px;
+    box-sizing: border-box;    
+}
+.nav{            
+    width: 75%;
+    height: 100%;
+    display: flex;    
+    align-items: flex-start;
     border-bottom: 1px solid var(--nGrayishBlue);    
 }
-.nav__logo-container{               
-    flex-grow: 1;
-    margin:auto 0;    
+.nav__logo-container{                   
+    flex-grow: 1;       
+}
+.nav__logo{               
+    width: 70%;    
 }
 .nav__list{
-    box-sizing: border-box;
-    height: 100%;
+    box-sizing: border-box;    
     flex-grow: 8;    
+    height: 100%;
 }
 .nav__list li{      
     list-style-type: none;
     height: 100%;          
-    font-size: 18px;    
+    font-size: 14px;    
+    font-weight: 400;    
     display: inline-flex;
-    margin: 0 5px;
+    margin: 0 10px;
     /* animation: animationButton 1s forwards; */
 }
 .nav__list li a{
-    text-decoration: none;
-    margin: auto 0;
+    outline: none;
+    text-decoration: none;        
     color: var(--nDrkGrayishBlue);
 }
-.nav__list li:hover{   
-    border-bottom: 3px solid var(--pOrange);    
+.nav__list li a:hover{
+    font-weight: 700;
+    color: var(--nBlack);
+    border-bottom: 4px solid var(--pOrange);    
 }
 
 /* ANIMATION FOR HOVER */
@@ -77,13 +94,12 @@ p{
     justify-content: space-between;
     box-sizing: border-box;
 }
-.section__cart-button{
+.section__cart-button{        
     border: none;
     cursor: pointer;
     width: 35px;
     height: 35px;
-    margin: auto;    
-    color: khaki;
+    margin: auto;        
     background: url("images/icon-cart.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -111,8 +127,7 @@ p{
     object-fit: cover;    
 }
 
-.container{
-    border: 1px solid red;
+.container{    
     max-width: max-content;
     max-height: max-content;    
     padding: 20px 0;
@@ -268,8 +283,7 @@ p{
     width: 25px;
     height: 25px;
 }
-.footer{
-    border: 1px solid blue;    
+.footer{    
     height: 90%;    
     text-align: end;
 }
