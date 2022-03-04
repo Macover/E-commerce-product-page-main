@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="desktop-styles.css">
+  <link rel="stylesheet" href="responsive-styles.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
-<body>  
-  <div class="container__nav">
+<body> 
+  
+  <!-- Desktop mode -->
+  
+  <!-- <div class="container__nav">
     <div class="nav">
       <div class="nav__logo-container">
         <img src="images/logo.svg" alt="" class="nav__logo">
@@ -62,7 +65,62 @@
   <div class="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
+  </div> -->
+
+  <!-- Mobile mode -->
+  <div class="responsive">
+    <div class="responsive-nav-container">
+      <div class="responsive-nav__section-one">
+        <button class="responsive-nav__button"></button>
+        <img class="responsive-nav__logo"/>
+      </div>
+      <div class="responsive-nav__section-two">
+        <button class="responsive-nav__cart-button"></button>
+        <button class="responsive-nav__profile-button"></button>      
+      </div>
+    </div>
+  
+    <div class="responsive-container">
+      <div class="responsive-primary-img">
+        <div class="primary-img__buttons-container">
+          <div class="primary-img__button-left-container">
+            <button class="primary-img__button-left"></button>
+          </div>
+          <div class="primary-img__button-right-container">
+            <button class="primary-img__button-right"></button>
+          </div>
+        </div>        
+      </div>
+      <div class="responsive-info-container">
+        <h3 class="info-container__company-name">Sneaker Company</h3>
+        <h1 class="info-container__product-name">Fall Limited Edition Sneakers</h1>        
+        <p class="info-container__product-info">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
+        <div class="info-container__prices-container">
+          <h2 class="prices-container__primary-price">$125.00</h2>
+          <div class="prices-container__discount-container">
+            <p class="discount-container__discount">50%</p>
+          </div>
+          <p class="prices-container__old-price">$250.00</p>          
+        </div>
+        <div class="info-container__input-container">
+          <button class="input-container__less-button"></button>
+          <input type="text" class="input-container__input">
+          <button class="input-container__plus-button"></button>
+        </div>
+        <button class="info-container__button-cart">Add to cart</button>
+      </div>
+    </div>
+  
+    <div class="responsive-footer">
+      Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by  <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
+    </div>  
   </div>
+  
+
+
   <script src="script.js"></script>
 </body>
 </html>
