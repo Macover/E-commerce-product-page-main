@@ -18,7 +18,18 @@ button{
     outline-color: var(--pOrange);
 }
 
-/* 840px to tablets */
+/* 840px for tablets */
+
+@media (min-width: 840px) {
+    .desktop-mode{
+        display: flex;
+        flex-direction: column;
+    }
+    .responsive{
+        display: none;
+    }
+}
+
 
 :root{
     /* Primary colors */
@@ -301,7 +312,7 @@ button{
 .footer{        
     text-align: end;
     margin-top: auto;        
-    padding: 5px 0px;    
+    padding: 5px;    
 }
 
 

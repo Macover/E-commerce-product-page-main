@@ -11,61 +11,62 @@
 <body> 
   
   <!-- Desktop mode -->
-  
-  <!-- <div class="container__nav">
-    <div class="nav">
-      <div class="nav__logo-container">
-        <img src="images/logo.svg" alt="" class="nav__logo">
-      </div>
-      <ul class="nav__list">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="nav__section">
-        <button id="cartButton" class="section__cart-button"></button>
-        <div class="section__profile-container">
-          <button class="profile__button"></button>
+  <div class="desktop-mode">
+    <div class="container__nav">
+      <div class="nav">
+        <div class="nav__logo-container">
+          <img src="images/logo.svg" alt="" class="nav__logo">
+        </div>
+        <ul class="nav__list">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav__section">
+          <button id="cartButton" class="section__cart-button"></button>
+          <div class="section__profile-container">
+            <button class="profile__button"></button>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="container">
+      <div class="container__section-one">
+        <img src="images/image-product-1.jpg" alt="" class="section-one__primary-image">
+        <div class="section-one__images-container">
+          <button><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+          <button><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+          <button><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+          <button><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
         </div>
       </div>
-    </div>    
-  </div>
-  <div class="container">
-    <div class="container__section-one">
-      <img src="images/image-product-1.jpg" alt="" class="section-one__primary-image">
-      <div class="section-one__images-container">
-        <button><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
-      </div>
-    </div>
-    <div class="container__section-two">
-      <span class="section-two__company-name">Sneaker Company</span>
-      <span class="section-two__product-name">Fall Limited Edition Sneakers</span>
-      <p class="section-two__description">These low-profile sneakers are your perfect casual wear companion. Featuring a
-        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      <div class="section-two__price-container">
-        <span class="price__principal">$125.00</span>
-        <span class="price__porcentage">50%</span>
-        <p class="price__older">$250.00</p>
-      </div>
-      <div class="section-two__buttons-container">
-        <div class="buttons__input-number-container">
-          <button id="minusButton" class="input__less-icon"></button>
-          <input id="inputNumber" class="input__text" type="text" value="0">
-          <button id="addButton" class="input__plus-icon"></button>
+      <div class="container__section-two">
+        <span class="section-two__company-name">Sneaker Company</span>
+        <span class="section-two__product-name">Fall Limited Edition Sneakers</span>
+        <p class="section-two__description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="section-two__price-container">
+          <span class="price__principal">$125.00</span>
+          <span class="price__porcentage">50%</span>
+          <p class="price__older">$250.00</p>
         </div>
-        <button class="button__cart"><i></i> Add to cart</button>
+        <div class="section-two__buttons-container">
+          <div class="buttons__input-number-container">
+            <button id="minusButton" class="input__less-icon"></button>
+            <input maxlength="2" id="inputNumber" class="input__text" type="text" value="0">
+            <button id="addButton" class="input__plus-icon"></button>
+          </div>
+          <button class="button__cart"><i></i> Add to cart</button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
-  </div> -->
+    <div class="footer">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
+    </div>
+  </div>  
 
   <!-- Mobile mode -->
   <div class="responsive">
@@ -105,22 +106,20 @@
           <p class="prices-container__old-price">$250.00</p>          
         </div>
         <div class="info-container__input-container">
-          <button class="input-container__less-button"></button>
-          <input type="text" class="input-container__input">
-          <button class="input-container__plus-button"></button>
+          <button id="mob-lessButtonCart" class="input-container__less-button"></button>
+          <input maxlength="2" id="mob-inputCart" type="text" class="input-container__input">
+          <button id="mob-plusButtonCart" class="input-container__plus-button"></button>
         </div>
-        <button class="info-container__button-cart">Add to cart</button>
+        <button class="info-container__button-cart"><div class="button-cart__icon"></div>Add to cart</button>
       </div>
-    </div>
-  
+    </div>  
     <div class="responsive-footer">
       Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by  <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
     </div>  
-  </div>
-  
+  </div>  
 
-
+  <script src="script-mobile.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

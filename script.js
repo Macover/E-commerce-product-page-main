@@ -1,4 +1,4 @@
-"use strict";
+
 
 const cartButton = document.querySelector("#cartButton");
 const inputNumber = document.querySelector("#inputNumber");
