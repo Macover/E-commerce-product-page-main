@@ -1,5 +1,3 @@
-
-
 const cartButton = document.querySelector("#cartButton");
 const inputNumber = document.querySelector("#inputNumber");
 const minusButton = document.querySelector("#minusButton");
