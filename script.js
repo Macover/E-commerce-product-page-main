@@ -20,3 +20,4 @@ minusButton.addEventListener("click",()=>{
     if(inputNumber.value < 1) inputNumber.value = 0;
     else inputNumber.value--;
 });
+//asda
