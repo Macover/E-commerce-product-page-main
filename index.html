@@ -70,19 +70,49 @@
 
   <!-- Mobile mode -->
   <div class="responsive">
+
+    <!-- <div class="responsive__sidebar">
+      <div class="sidebar__header">
+        <button class="sidebar__button-close"></button>
+      </div>
+      <div class="sidebar__body">
+
+      </div>
+    </div> -->
+
     <div class="responsive-nav-container">
       <div class="responsive-nav__section-one">
         <button class="responsive-nav__button"></button>
-        <img class="responsive-nav__logo"/>
+        <div class="responsive-nav__logo"></div>
       </div>
       <div class="responsive-nav__section-two">
         <button id="mob-cartButton" class="responsive-nav__cart-button"></button>
-        <button class="responsive-nav__profile-button"></button>      
+        <button id="mob-profileButton" class="responsive-nav__profile-button"></button>      
       </div>
     </div>
   
     <div class="responsive-container">
-      <div class="cart-container"></div>
+      
+      <div id="cartCard" class="cart-container onClose">
+        <div class="cart-container__header">
+          <h3>Cart</h3>
+        </div>
+        <div class="cart-container__divisor"></div>
+        <div class="cart-container__body">
+          <div class="cart-body__items-checkout ">
+            <div class="cart-body__item-container">
+              <div class="item__img"></div>
+              <p class="item__name">Autumn Limited Edition...</p>
+              <p class="item__price">$125.00 x 3 <b class="item__total">$375.00</b></p>
+              <button class="item__icon-trash"></button>
+            </div>          
+            <button class="cart-body__button-checkout">Checkout</button>
+          </div>          
+          <p class="cart-body__description isDisabled">Your cart is empty.</p>          
+        </div>
+      </div>
+
+
       <div class="responsive-primary-img">
         <div class="primary-img__buttons-container">
           <div class="primary-img__button-left-container">
@@ -113,11 +143,12 @@
         </div>
         <button class="info-container__button-cart"><div class="button-cart__icon"></div>Add to cart</button>
       </div>
-    </div>  
-    <div class="responsive-footer">
-      Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by  <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
-    </div>  
+
+      <div class="responsive-footer">
+        Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by  <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
+      </div> 
+    </div>       
   </div>  
 
   <script src="script-mobile.js"></script>

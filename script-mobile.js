@@ -1,8 +1,16 @@
 //NAV
 const mobCartButton = document.getElementById("mob-cartButton");
+const cartCard = document.getElementById("cartCard"); 
 
-mobCartButton.addEventListener("click", ()=>{
-   console.log("first") 
+mobCartButton.addEventListener("click", ()=>{       
+   
+   if(cartCard.classList.contains("onClose")){
+       cartCard.classList.toggle("isOpen");
+       cartCard.classList.remove("onClose")        
+   }else{
+    cartCard.classList.remove("isOpen")        
+    cartCard.classList.toggle("onClose");
+   }
 });
 
 //Container buttons
