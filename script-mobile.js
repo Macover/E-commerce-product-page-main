@@ -1,6 +1,24 @@
 //NAV
 const mobCartButton = document.getElementById("mob-cartButton");
 const cartCard = document.getElementById("cartCard"); 
+const btnSideBarClose = document.getElementById("btnSideBarClose");
+const btnSideBarOpen = document.getElementById("btnSideBarOpen");
+const responsiveSidebar = document.getElementById("responsiveSideBar");
+
+btnSideBarOpen.addEventListener("click",()=>{
+    console.log("sideBarOpen");
+    if(responsiveSidebar.classList.contains("onClose")){
+        responsiveSidebar.classList.remove("onClose");
+        responsiveSidebar.classList.add("isOpenFlex");
+    }
+});
+btnSideBarClose.addEventListener("click",()=>{
+    console.log("sideBarClose");
+    if(responsiveSidebar.classList.contains("isOpenFlex")){
+        responsiveSidebar.classList.remove("isOpenFlex");
+        responsiveSidebar.classList.toggle("onClose");
+    }
+});
 
 mobCartButton.addEventListener("click", ()=>{       
    
