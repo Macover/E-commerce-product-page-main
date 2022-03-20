@@ -15,7 +15,8 @@ p{
     font-size: 16px;
 }
 button{
-    outline-color: var(--pOrange);
+    border: none;
+    outline: none;
 }
 
 /* 840px for tablets */
@@ -114,6 +115,7 @@ button{
 .section__cart-button{        
     border: none;
     cursor: pointer;
+    outline: none;
     width: 35px;
     height: 35px;
     margin: auto;        
@@ -153,6 +155,13 @@ button{
     box-sizing: border-box;
     justify-content: center;      
     position: relative;
+}
+
+.onOpenFlex{
+    display: flex;
+}
+.onClose{
+    display: none;
 }
 
 .container__card-cart{
@@ -314,7 +323,7 @@ button{
     text-align: center;
     font-weight: 700;
     border: none;
-    outline-color: none;    
+    outline: none;
 }
 .input__plus-icon{    
     width: 20%;    

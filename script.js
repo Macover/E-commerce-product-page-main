@@ -20,4 +20,17 @@ minusButton.addEventListener("click",()=>{
     if(inputNumber.value < 1) inputNumber.value = 0;
     else inputNumber.value--;
 });
-//asda
+
+// Cart Functionality
+
+const deskCardCart = document.getElementById("deskCardCart");
+
+cartButton.addEventListener("click",()=>{
+    if(deskCardCart.classList.contains("onClose")){
+        deskCardCart.classList.remove("onClose");
+        deskCardCart.classList.toggle("onOpenFlex");
+    }else{
+        deskCardCart.classList.remove("onOpenFlex");
+        deskCardCart.classList.toggle("onClose");
+    }
+})
