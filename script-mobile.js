@@ -5,6 +5,7 @@ const btnSideBarClose = document.getElementById("btnSideBarClose");
 const btnSideBarOpen = document.getElementById("btnSideBarOpen");
 const responsiveSidebar = document.getElementById("responsiveSideBar");
 const resSideBarContainer = document.getElementById("resSideBarContainer");
+const resSidebarBackTap = document.getElementById("resSidebarBackTap");
 
 btnSideBarOpen.addEventListener("click",()=>{    
     if(responsiveSidebar.classList.contains("onClose")){
@@ -18,12 +19,16 @@ btnSideBarOpen.addEventListener("click",()=>{
         resSideBarContainer.style.animationFillMode = "forwards";
     }
 });
-btnSideBarClose.addEventListener("click",()=>{    
+const closeSideBar = ()=>{    
     if(responsiveSidebar.classList.contains("isOpenFlex")){
         responsiveSidebar.classList.remove("isOpenFlex");
         responsiveSidebar.classList.toggle("onClose");
     }
-});
+}
+btnSideBarClose.addEventListener("click",()=>closeSideBar());
+resSidebarBackTap.addEventListener("click",()=>closeSideBar());
+
+
 
 mobCartButton.addEventListener("click", ()=>{       
    
@@ -42,7 +47,7 @@ const mobInputCart = document.getElementById("mob-inputCart");
 const mobPlusButtonCart = document.getElementById("mob-plusButtonCart");
 
 const mobValidateInputNumber = e =>{
-    if(isNaN(e.key)) mobInputCart.value = 0;
+    if(isNaN(e.key)) mobInputCart.value = 1;
     else mobInputCart.value = e.key;
 }
 
@@ -53,6 +58,6 @@ mobPlusButtonCart.addEventListener("click",()=>{
     else mobInputCart.value++;
 });
 mobLessButtonCart.addEventListener("click",()=>{    
-    if(mobInputCart.value < 1) mobInputCart.value = 0;
+    if(mobInputCart.value < 2) mobInputCart.value = 1;
     else mobInputCart.value--;
 });
