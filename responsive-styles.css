@@ -11,7 +11,6 @@
     --nWhite : hsl(0, 0%, 100%);
     --nBlack : hsl(0, 0%, 0%);
 }
-
 @media (max-width: 840px) {
     .responsive{
         width: 100%;
@@ -24,13 +23,29 @@
         display: none;
     }
 }
-
+.isOpen{
+    display: block;
+    transition: all 1s;
+}
+.isOpenFlex{
+    display: flex;
+}
+.onClose{
+    display: none;
+}
+.isEnabled{
+    display: block;
+}
+.isDisabled{
+    display: none;
+}
 .responsive-nav-container{    
+    height: max-content;
     padding: 10px;    
     display: flex;
     justify-content:space-between;
 }
-.responsive-nav__section-one{    
+.responsive-nav__section-one{        
     display: flex;
     align-items: center;
     gap: 0 10px;
@@ -82,23 +97,6 @@
     display: flex; 
     flex-direction: column;
     position: relative;   
-}
-
-.isOpen{
-    display: block;
-    transition: all 1s;
-}
-.isOpenFlex{
-    display: flex;
-}
-.onClose{
-    display: none;
-}
-.isEnabled{
-    display: block;
-}
-.isDisabled{
-    display: none;
 }
 .cart-container{    
     width: 95%;    
@@ -182,7 +180,6 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .cart-body__description{
     font-size: 15px;
     color: var(--nDrkGrayishBlue);
@@ -190,7 +187,6 @@
     margin: auto;
     padding: 70px;    
 }
-
 .cart-body__button-checkout{
     border-radius: 8px;
     border: none;
@@ -201,10 +197,13 @@
     width: 100%; 
     margin: 25px auto;
 }
-
-.responsive-primary-img{    
+.responsive__primary-img-container{
     width: 100%;
-    min-height: 325px;
+    min-height: 30%;    
+}
+.responsive-primary-img{   
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     background: url("images/image-product-1.jpg");
@@ -244,11 +243,12 @@
 }
 
 .responsive-info-container{
-    width: 100%;        
+    width: 100%;    
+    height: 60%;    
     padding: 10px 20px 40px;
     display: flex;
-    flex-direction: column;
-    gap: 10px 0;
+    justify-content: space-between;
+    flex-direction: column;    
     box-sizing: border-box;
 }
 
@@ -422,10 +422,12 @@
     color: var(--nVryDarkBlue);    
 }
 .responsive-footer{
+    width: max-content;
+    max-height: 10%;
     color: var(--nWhite);
     padding: 10px 5px;
-    background-color: var(--pOrange);
-    align-items: flex-end;
+    background-color: var(--pOrange);    
+    width: 100%;    
     font-weight: 400;
 }
 .responsive-footer a{
