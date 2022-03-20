@@ -4,16 +4,21 @@ const cartCard = document.getElementById("cartCard");
 const btnSideBarClose = document.getElementById("btnSideBarClose");
 const btnSideBarOpen = document.getElementById("btnSideBarOpen");
 const responsiveSidebar = document.getElementById("responsiveSideBar");
+const resSideBarContainer = document.getElementById("resSideBarContainer");
 
-btnSideBarOpen.addEventListener("click",()=>{
-    console.log("sideBarOpen");
+btnSideBarOpen.addEventListener("click",()=>{    
     if(responsiveSidebar.classList.contains("onClose")){
         responsiveSidebar.classList.remove("onClose");
         responsiveSidebar.classList.add("isOpenFlex");
+
+        /*Put animations here*/
+        resSideBarContainer.style.animationName = "sideBarAnimationOpen";
+        resSideBarContainer.style.animationDuration = "0.5s";
+        resSideBarContainer.style.animationTimingFunction = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+        resSideBarContainer.style.animationFillMode = "forwards";
     }
 });
-btnSideBarClose.addEventListener("click",()=>{
-    console.log("sideBarClose");
+btnSideBarClose.addEventListener("click",()=>{    
     if(responsiveSidebar.classList.contains("isOpenFlex")){
         responsiveSidebar.classList.remove("isOpenFlex");
         responsiveSidebar.classList.toggle("onClose");
