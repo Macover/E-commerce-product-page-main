@@ -426,7 +426,9 @@
     padding: 10px 5px;
     background-color: var(--pOrange);
     align-items: flex-end;
+    font-weight: 400;
 }
 .responsive-footer a{
+    font-weight: 700;    
     color: var(--nWhite);    
 }
