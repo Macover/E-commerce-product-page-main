@@ -74,6 +74,23 @@
     align-items: center;
     gap: 0 10px;
 }
+.responsive-nav__button-container{
+    width: 45px;
+    display: flex;
+    flex-direction: column;    
+    position: relative;    
+}
+.responsive-nav__number-of-button{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--nWhite);
+    background-color: var(--pOrange);
+    padding: 2px 8px;
+    border-radius: 30px;    
+    margin: auto;
+    right: 3px;
+}
 .responsive-nav__cart-button{
     width: 35px;
     height: 35px;

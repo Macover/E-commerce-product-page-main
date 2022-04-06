@@ -6,6 +6,38 @@ const btnSideBarOpen = document.getElementById("btnSideBarOpen");
 const responsiveSidebar = document.getElementById("responsiveSideBar");
 const resSideBarContainer = document.getElementById("resSideBarContainer");
 const resSidebarBackTap = document.getElementById("resSidebarBackTap");
+//Add Products to cart
+const numberOfButtonCart = document.getElementById("numberOfButtonCart");
+const addProductCart = document.getElementById("addProductCart");
+//Container buttons
+const mobLessButtonCart = document.getElementById("mob-lessButtonCart");
+const mobInputCart = document.getElementById("mob-inputCart");
+const mobPlusButtonCart = document.getElementById("mob-plusButtonCart");
+//item body cart
+const itemCart = document.getElementById("itemCart");
+const cartEmpty = document.getElementById("cartEmpty");
+const removeItemCart = document.getElementById("removeItemCart");
+
+removeItemCart.addEventListener("click",()=>{
+    
+});
+
+addProductCart.addEventListener("click",()=>{        
+    if(mobInputCart.value == ""){
+        console.log("esta vacio")        
+    }else{        
+        /* --> ADD PRODUCTS TO THE CART <-- */
+
+        //add number to the cart icon
+        numberOfButtonCart.classList.remove("isDisabled");
+        numberOfButtonCart.innerHTML = mobInputCart.value;
+        //add item to the body of the cart
+        cartEmpty.classList.add("isDisabled");
+        itemCart.classList.remove("isDisabled");
+
+    }
+    console.log(mobInputCart.value)
+});
 
 btnSideBarOpen.addEventListener("click",()=>{    
     if(responsiveSidebar.classList.contains("onClose")){
@@ -29,7 +61,6 @@ btnSideBarClose.addEventListener("click",()=>closeSideBar());
 resSidebarBackTap.addEventListener("click",()=>closeSideBar());
 
 
-
 mobCartButton.addEventListener("click", ()=>{       
    
    if(cartCard.classList.contains("onClose")){
@@ -40,11 +71,6 @@ mobCartButton.addEventListener("click", ()=>{
     cartCard.classList.toggle("onClose");
    }
 });
-
-//Container buttons
-const mobLessButtonCart = document.getElementById("mob-lessButtonCart");
-const mobInputCart = document.getElementById("mob-inputCart");
-const mobPlusButtonCart = document.getElementById("mob-plusButtonCart");
 
 const mobValidateInputNumber = e =>{
     if(isNaN(e.key)) mobInputCart.value = 1;

@@ -105,7 +105,10 @@
         <div class="responsive-nav__logo"></div>
       </div>
       <div class="responsive-nav__section-two">
-        <button id="mob-cartButton" class="responsive-nav__cart-button"></button>
+        <div class="responsive-nav__button-container">
+          <span id="numberOfButtonCart" class="responsive-nav__number-of-button isDisabled">3</span>
+          <button id="mob-cartButton" class="responsive-nav__cart-button"></button>
+        </div>        
         <button id="mob-profileButton" class="responsive-nav__profile-button"></button>      
       </div>
     </div>
@@ -118,16 +121,16 @@
         </div>
         <div class="cart-container__divisor"></div>
         <div class="cart-container__body">
-          <div class="cart-body__items-checkout ">
+          <div id="itemCart" class="cart-body__items-checkout isDisabled">
             <div class="cart-body__item-container">
               <div class="item__img"></div>
               <p class="item__name">Autumn Limited Edition...</p>
               <p class="item__price">$125.00 x 3 <b class="item__total">$375.00</b></p>
-              <button class="item__icon-trash"></button>
+              <button id="removeItemCart" class="item__icon-trash"></button>
             </div>          
             <button class="cart-body__button-checkout">Checkout</button>
           </div>          
-          <p class="cart-body__description isDisabled">Your cart is empty.</p>          
+          <p id="cartEmpty" class="cart-body__description">Your cart is empty.</p>          
         </div>
       </div>
       <div class="responsive__primary-img-container">
@@ -160,7 +163,7 @@
           <input maxlength="1" id="mob-inputCart" type="text" class="input-container__input">
           <button id="mob-plusButtonCart" class="input-container__plus-button"></button>
         </div>
-        <button class="info-container__button-cart"><div class="button-cart__icon"></div>Add to cart</button>        
+        <button id="addProductCart" class="info-container__button-cart"><div class="button-cart__icon"></div>Add to cart</button>        
       </div>
       <div class="responsive-footer">
         Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
