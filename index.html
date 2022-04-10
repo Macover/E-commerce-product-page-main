@@ -12,6 +12,25 @@
   
   <!-- Desktop mode -->
   <div class="desktop-mode">
+
+    <div id="modalImg" class="image-modal-background onClose">
+      <div class="modal-primary-img__container">
+          <div class="modal__close-button-container">
+            <button id="modalCloseButton" class="modal__close-button"></button>
+          </div>
+          <div class="modal__primary-img">
+            <img src="images/image-product-1.jpg" class="modal__img">
+            <div class="modal__buttons-container">
+              <button class="modal-buttons__left-button"></button>
+              <button class="modal-buttons__right-button"></button>
+            </div>
+          </div>
+      </div>
+      <div class="image-modal__imgs-container">
+
+      </div>
+    </div>
+
     <div class="container__nav">
       <div class="nav">
         <div class="nav__logo-container">
@@ -42,7 +61,7 @@
         </div>
       </div>
       <div class="container__section-one">
-        <img src="images/image-product-1.jpg" alt="" class="section-one__primary-image">
+        <img id="primaryImageD" src="images/image-product-1.jpg" alt="" class="section-one__primary-image">
         <div class="section-one__images-container">
           <button><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
           <button><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
@@ -68,12 +87,12 @@
           </div>
           <button class="button__cart"><i></i> Add to cart</button>
         </div>
-      </div>
-    </div>
+      </div>      
+    </div>  
     <div class="footer">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.github.com/Macover" target="_blank">Isaí Rodríguez Herrera</a>.
-    </div>
+    </div>  
   </div>  
 
   <!-- Mobile mode -->
@@ -172,6 +191,6 @@
     </div>       
   </div>  
   <script src="script-mobile.js"></script>
-  <script src="script.js"></script>
+  <script src="script-desktop.js"></script>
 </body>
 </html>
