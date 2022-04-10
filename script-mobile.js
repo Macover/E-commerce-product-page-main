@@ -17,9 +17,19 @@ const mobPlusButtonCart = document.getElementById("mob-plusButtonCart");
 const itemCart = document.getElementById("itemCart");
 const cartEmpty = document.getElementById("cartEmpty");
 const removeItemCart = document.getElementById("removeItemCart");
+const totalItemCart = document.getElementById("totalItemCart");
+const accounmentCartBody = document.getElementById("accounmentCartBody");
 
 removeItemCart.addEventListener("click",()=>{
-    
+    numberOfButtonCart.classList.add("isDisabled");    
+    itemCart.classList.add("items-remove-animated");
+    setTimeout(()=>{ 
+        itemCart.classList.add("isDisabled");
+        itemCart.classList.remove("items-remove-animated");
+    },500);
+    if(cartEmpty.classList.contains("isDisabled")){
+        cartEmpty.classList.remove("isDisabled");
+    }
 });
 
 addProductCart.addEventListener("click",()=>{        
@@ -33,10 +43,12 @@ addProductCart.addEventListener("click",()=>{
         numberOfButtonCart.innerHTML = mobInputCart.value;
         //add item to the body of the cart
         cartEmpty.classList.add("isDisabled");
-        itemCart.classList.remove("isDisabled");
-
-    }
-    console.log(mobInputCart.value)
+        itemCart.classList.remove("isDisabled");        
+        accounmentCartBody.innerHTML = mobInputCart.value;
+          //calculate the total of the product.
+        let total = mobInputCart.value * 125;        
+        totalItemCart.innerHTML = `$${total}.00`;
+    }    
 });
 
 btnSideBarOpen.addEventListener("click",()=>{    
