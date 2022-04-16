@@ -58,8 +58,7 @@ button{
     min-width: 30%;
     max-width: 35%;
     min-height: 70%;
-    max-height: 80%;
-    border: 1px solid red;    
+    max-height: 80%;       
     margin: auto;
     padding: 10px 20px;
     display: flex;
@@ -68,24 +67,23 @@ button{
 }
 .modal__close-button-container{
     width: 100%;
-    height: max-content;
-    border: 1px solid green;    
+    height: max-content;    
+    padding: 10px 0;
     display: flex;
 }
 .modal__close-button{
-    width: 30px;
-    height: 30px;    
-    border: 1px solid red;
+    width: 25px;
+    height: 25px;            
     margin-left: auto;
     background: url("images/icon-close.svg");
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;    
     cursor: pointer;    
 }
 .modal__pri-img-container{
     width: 100%;
-    flex-grow: 8;    
-    border: 1px solid orange;
+    flex-grow: 8;        
     box-sizing: border-box;
     display: flex;
     flex-direction: column;    
@@ -99,8 +97,7 @@ button{
 }
 .pri-img__buttons-container{
     width: 100%;
-    height: 8%;
-    border: 1px solid blue;
+    height: 8%;    
     position: absolute;    
     top: 50%;
     right: 50%;
@@ -111,7 +108,7 @@ button{
 .pri-img__buttons-container div{
     width: 50px;
     height: 100%;
-    background-color: var(--nDrkGrayishBlue);
+    background-color: var(--nWhite);
     border-radius: 50%;
     display: flex;
     cursor: pointer;  
@@ -134,8 +131,7 @@ button{
 
 .modal__secondary-img-container{
     width: 100%;
-    flex-grow: 1.5;
-    border: 1px solid brown;
+    flex-grow: 1.5;    
     display: flex;
     flex-direction: row;
     gap: 20px;    
@@ -155,6 +151,7 @@ button{
 .modal__secondary-img-container div:hover{
     cursor: pointer;
     filter: contrast(60%);
+    border: none;
 }
 .secondary-img__img1{
     background: url("images/image-product-1-thumbnail.jpg");    
