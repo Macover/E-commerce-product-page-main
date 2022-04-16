@@ -74,12 +74,15 @@ button{
 .modal__close-button{
     width: 25px;
     height: 25px;            
-    margin-left: auto;
-    background: url("images/icon-close.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;    
     cursor: pointer;    
+    margin-left: auto;
+    background-color: var(--nDrkGrayishBlue); /* defines the background color of the image */
+    mask: url("images/icon-close.svg") no-repeat center / contain;
+    -webkit-mask: url("images/icon-close.svg") no-repeat center / contain;   
+    transition: background-color 0.5s;    
+}
+.modal__close-button:hover{
+    background-color: var(--pOrange); /* defines the background color of the image */    
 }
 .modal__pri-img-container{
     width: 100%;
@@ -117,18 +120,21 @@ button{
     width: 30%;
     height: 30%;
     margin: auto;
-    background-position: center;
-    background-size: contain;    
-    background-repeat: no-repeat;     
-    cursor: pointer;  
+    cursor: pointer; 
+    background-color: var(--nBlack); /* defines the background color of the image */    
+    transition: background-color 0.5s;        
 }
 .left__button{        
-    background: url("images/icon-previous.svg");    
+    mask: url("images/icon-previous.svg") no-repeat center / contain;
+    -webkit-mask: url("images/icon-previous.svg") no-repeat center / contain;   
 }
 .right__button{
-    background: url("images/icon-next.svg");
+    mask: url("images/icon-next.svg") no-repeat center / contain;
+    -webkit-mask: url("images/icon-next.svg") no-repeat center / contain;   
 }
-
+.pri-img__buttons-container div:hover > button{    
+    background-color: var(--pOrange);
+}
 .modal__secondary-img-container{
     width: 100%;
     flex-grow: 1.5;    
