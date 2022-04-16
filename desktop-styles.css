@@ -59,8 +59,7 @@ button{
     max-width: 35%;
     min-height: 70%;
     max-height: 80%;
-    border: 1px solid red;
-    background-color: var(--nWhite);
+    border: 1px solid red;    
     margin: auto;
     padding: 10px 20px;
     display: flex;
@@ -115,6 +114,7 @@ button{
     background-color: var(--nDrkGrayishBlue);
     border-radius: 50%;
     display: flex;
+    cursor: pointer;  
 }
 .pri-img__buttons-container div button{
     width: 30%;
@@ -122,7 +122,8 @@ button{
     margin: auto;
     background-position: center;
     background-size: contain;    
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;     
+    cursor: pointer;  
 }
 .left__button{        
     background: url("images/icon-previous.svg");    
@@ -140,18 +141,32 @@ button{
     gap: 20px;    
     box-sizing: border-box;
     justify-content: baseline;    
-    padding: 30px 20px 10px;
+    padding: 30px 30px 10px;
 }
 .modal__secondary-img-container div{
     flex-grow: 1;        
-    border: 1px solid var(--pOrange);    
+    border: .1em solid var(--pOrange);    
     border-radius: 0.8em;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: filter .5s;
+}
+.modal__secondary-img-container div:hover{
+    cursor: pointer;
+    filter: contrast(60%);
 }
 .secondary-img__img1{
     background: url("images/image-product-1-thumbnail.jpg");    
+}
+.secondary-img__img2{
+    background: url("images/image-product-2-thumbnail.jpg");    
+}
+.secondary-img__img3{
+    background: url("images/image-product-3-thumbnail.jpg");    
+}
+.secondary-img__img4{
+    background: url("images/image-product-4-thumbnail.jpg");    
 }
 
 .container__nav{
