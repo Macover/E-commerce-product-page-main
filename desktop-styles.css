@@ -173,7 +173,7 @@ button{
 }
 
 .container__nav{
-    margin-top: 5px;
+    margin: 2em 0 0;
     width: 100%;    
     height: 70px;        
     display: flex; 
@@ -186,16 +186,17 @@ button{
     width: 75%;
     height: 100%;
     display: flex;    
-    align-items: flex-start;
-    border-bottom: 1px solid var(--nGrayishBlue);    
+    align-items: flex-start;    
+    border-bottom: 1px solid var(--nGrayishBlue);        
 }
-.nav__logo-container{                   
+.nav__logo-container{         
     flex-grow: 1;       
 }
 .nav__logo{               
     width: 70%;    
 }
 .nav__list{
+    margin: auto 0;
     box-sizing: border-box;    
     flex-grow: 8;    
     height: 100%;
@@ -206,32 +207,45 @@ button{
     font-size: 14px;    
     font-weight: 400;    
     display: inline-flex;
-    margin: 0 10px;
-    /* animation: animationButton 1s forwards; */
+    flex-direction: column;
+    margin: 0 10px;    
 }
 .nav__list li a{
+    font-weight: 400;
     outline: none;
     text-decoration: none;        
     color: var(--nDrkGrayishBlue);
+    transition: color 0.5s;
 }
-.nav__list li a:hover{
-    font-weight: 700;
-    color: var(--nBlack);
-    border-bottom: 4px solid var(--pOrange);    
+.list__bottom{    
+    width: 0%;        
+    margin-top: auto;     
+    transition: animation 1s;
 }
-
+.nav__list li:hover > a{    
+    color: var(--nBlack);       
+}
+.nav__list li:hover > .list__bottom{    
+    animation-name: animationListBottom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;    
+    animation-timing-function:linear
+}    
 /* ANIMATION FOR HOVER */
 
-/* @keyframes animationBottom {
+@keyframes animationListBottom {
     from{
-        border-bottom-width: 10%;
+        width: 100%;
+        border: .5px solid var(--pOrange);
     }
     to{
-        border-bottom-width: 100%;
+        width: 100%;
+        border: 2px solid var(--pOrange);
     }
-} */
+}
 
-.nav__section{
+.nav__section{    
     flex-grow: 1;    
     display: flex;
     flex-direction: row;
@@ -271,7 +285,6 @@ button{
     background-size: contain;
     object-fit: cover;    
 }
-
 .container{  
     padding: 20px 30px 0px;      
     max-width: max-content;
