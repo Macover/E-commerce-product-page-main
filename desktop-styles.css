@@ -265,12 +265,16 @@ button{
     border-radius: 100%;
 }
 .section__profile-container{
-    background-color: var(--pOrange);
+    background-color: var(--nWhite);
     width: 45px;
     height: 45px;
     margin: auto;    
     border-radius: 100%;
     display: flex;        
+    transition: background-color 1s;
+}
+.section__profile-container:hover{
+    background-color: var(--pOrange);
 }
 .profile__button{
     cursor: pointer;    
