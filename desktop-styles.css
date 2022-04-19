@@ -456,13 +456,29 @@ button{
     justify-content: center;
     box-sizing: border-box;
 }
-.input__less-icon{        
-    width: 20%;    
-    background: url("images/icon-minus.svg");
+.buttons__input-number-container button{
+    display: flex;
+    background: transparent;
+}
+.buttons__input-number-container button i{    
+    margin: auto;
+    width: 28px;
+    height: 28px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     border: none;
+    background-color: transparent;
+    transition: filter 1s;
+}
+.input__less-icon i{            
+    background: url("images/icon-minus.svg");
+}
+.input__plus-icon i{        
+    background: url("images/icon-plus.svg");
+}
+.input__less-icon i:hover, .input__plus-icon i:hover{    
+    filter: brightness(150%);    
 }
 .input__text{
     background: var(--nLigGrayishBlue);
@@ -471,14 +487,6 @@ button{
     font-weight: 700;
     border: none;
     outline: none;
-}
-.input__plus-icon{    
-    width: 20%;    
-    background: url("images/icon-plus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    border: none;
 }
 .button__cart{  
     margin: auto;  
@@ -509,7 +517,6 @@ button{
     filter: brightness(120%);
     box-shadow: 0px 5px 30px var(--pOrange);
 }
-
 .footer{   
     opacity: .2;     
     text-align: end;
