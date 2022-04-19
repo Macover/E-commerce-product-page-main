@@ -57,8 +57,8 @@ button{
 .modal-container{
     min-width: 30%;
     max-width: 35%;
-    min-height: 70%;
-    max-height: 80%;       
+    min-height: 80%;
+    max-height: 90%;       
     margin: auto;
     padding: 10px 20px;
     display: flex;
@@ -99,18 +99,18 @@ button{
     flex-grow: 1;    
 }
 .pri-img__buttons-container{
-    width: 100%;
+    width: 102%;
     height: 8%;    
     position: absolute;    
     top: 50%;
     right: 50%;
     transform: translate(50%,-115%);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 .pri-img__buttons-container div{
     width: 50px;
-    height: 100%;
+    height: 50px;
     background-color: var(--nWhite);
     border-radius: 50%;
     display: flex;
@@ -153,11 +153,11 @@ button{
     background-size: cover;
     background-position: center;
     transition: filter .5s;
+    box-sizing: border-box;
 }
 .modal__secondary-img-container div:hover{
     cursor: pointer;
-    filter: contrast(60%);
-    border: none;
+    filter: contrast(60%);    
 }
 .secondary-img__img1{
     background: url("images/image-product-1-thumbnail.jpg");    
