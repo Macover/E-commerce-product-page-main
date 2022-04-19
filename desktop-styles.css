@@ -483,7 +483,7 @@ button{
 .button__cart{  
     margin: auto;  
     width: 45%;
-    padding: 10px;
+    padding: 12px 0;
     font-size: 15px;
     font-weight: 700;
     background-color: var(--pOrange);
@@ -495,16 +495,23 @@ button{
     align-items: center;
     gap: 0px 5px;
     cursor: pointer;
+    transition: box-shadow, filter .5s;
 }
 .button__cart i{
-    background: url("images/icon-cart.svg");    
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--nWhite);
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;    
+    margin: 0 5px 0 0;
+    background-color: var(--nWhite); /* defines the background color of the image */
+    mask: url("images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("images/icon-cart.svg") no-repeat center / contain;           
 }
-.footer{        
+.button__cart:hover{
+    filter: brightness(120%);
+    box-shadow: 0px 5px 30px var(--pOrange);
+}
+
+.footer{   
+    opacity: .2;     
     text-align: end;
     margin-top: auto;        
     padding: 25px 50px;    
