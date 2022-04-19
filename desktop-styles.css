@@ -230,14 +230,14 @@ button{
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;    
-    animation-timing-function:linear
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
 }    
 /* ANIMATION FOR HOVER */
 
 @keyframes animationListBottom {
     from{
-        width: 100%;
-        border: .5px solid var(--pOrange);
+        width: 0;
+        border: 2px solid var(--pOrange);
     }
     to{
         width: 100%;
