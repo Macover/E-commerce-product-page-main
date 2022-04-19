@@ -256,13 +256,16 @@ button{
     border: none;
     cursor: pointer;
     outline: none;
-    width: 35px;
-    height: 35px;
-    margin: auto;        
-    background: url("images/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    margin: auto;                
+    background-color: var(--nDrkGrayishBlue); /* defines the background color of the image */
+    mask: url("images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("images/icon-cart.svg") no-repeat center / contain;   
+    transition: background-color 0.5s;    
+}
+.section__cart-button:hover{
+    background-color: var(--nBlack);
 }
 .section__profile-container{
     background-color: var(--nWhite);

@@ -46,6 +46,14 @@ minusButton.addEventListener("click",()=>{
 const deskCardCart = document.getElementById("deskCardCart");
 
 cartButton.addEventListener("click",()=>{
+
+    
+    if(cartButton.style.backgroundColor != "var(--nBlack)"){
+        cartButton.style.backgroundColor = "var(--nBlack)"
+    }else{
+        cartButton.style.backgroundColor = "var(--nDrkGrayishBlue)"
+    }
+
     if(deskCardCart.classList.contains("onClose")){
         deskCardCart.classList.remove("onClose");
         deskCardCart.classList.toggle("onOpenFlex");
