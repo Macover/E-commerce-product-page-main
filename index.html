@@ -54,7 +54,12 @@
           <li><a href="#">Contact</a><div class="list__bottom"></div></li>
         </ul>
         <div class="nav__section">
-          <button id="cartButton" class="section__cart-button"></button>
+          <div class="section__cart-button-container">
+            <div id="notificationCart" class="section__notification-cart-button-container onClose">
+              <span id="notificationCartNumber">0</span>
+            </div>
+            <button id="cartButton" class="section__cart-button"></button>
+          </div>
           <div class="section__profile-container">
             <button class="profile__button"></button>
           </div>
@@ -96,7 +101,7 @@
             <input maxlength="2" id="inputNumber" class="input__text" type="text" value="0">
             <button id="addButton" class="input__plus-icon"><i></i></button>
           </div>
-          <button class="button__cart"><i></i> Add to cart</button>
+          <button id="addToCartButton" class="button__cart"><i></i> Add to cart</button>
         </div>
       </div>      
     </div>  
