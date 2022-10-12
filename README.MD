@@ -1,0 +1,1 @@
+# Fix the animation hover in preview images (Desktop)

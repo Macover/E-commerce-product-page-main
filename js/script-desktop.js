@@ -3,13 +3,12 @@ const inputNumber = document.querySelector("#inputNumber");
 const minusButton = document.querySelector("#minusButton");
 const addButton = document.querySelector("#addButton");
 
-//Functionalty to open images modal.
+//Functionally to open images modal.
 const modal = document.querySelector("#modalImg");
 const primaryImageD = document.querySelector("#primaryImageD");
 const modalCloseButton = document.querySelector("#modalCloseButton");
 
-modalCloseButton.addEventListener("click", () => {
-    console.log("first")
+modalCloseButton.addEventListener("click", () => {    
     if (modal.classList.contains("onOpenFlex")) {
         modal.classList.remove("onOpenFlex");
         modal.classList.add("onClose");
@@ -22,6 +21,23 @@ primaryImageD.addEventListener("click", () => {
         modal.classList.add("onOpenFlex");
     }
 });
+
+// Functionality to put preview images as the principal.
+
+const secondaryImages = document.querySelectorAll(".secondary-img");
+const priImgModal = document.getElementById('pri-img-modal');
+
+secondaryImages.forEach(button => {    
+    button.addEventListener("click", () => {                
+        let src = button.firstChild.getAttribute("src");        
+        src = src.split('-thumbnail');        
+        const newSrc = src[0] + src[1];        
+        primaryImageD.setAttribute("src",newSrc)        
+        priImgModal.setAttribute("src",newSrc)
+    })
+});
+
+// Cart Functionality
 
 let inputNumberValue = 0;
 
@@ -40,8 +56,6 @@ minusButton.addEventListener("click", () => {
     if (inputNumber.value < 1) inputNumber.value = 0;
     else inputNumber.value--;
 });
-
-// Cart Functionality
 
 const deskCardCart = document.getElementById("deskCardCart");
 
@@ -71,12 +85,12 @@ addToCartButton.addEventListener("click", () => {
 
     const notificationCart = document.getElementById('notificationCart');
     const notificationCartNumber = document.getElementById('notificationCartNumber');
-    
+
     notificationCartNumber.textContent = inputNumber.value;
 
     if (inputNumber.value == 0) {
         notificationCart.classList.replace("onOpenFlex", "onClose");
-    } else {        
+    } else {
         notificationCart.classList.replace("onClose", "onOpenFlex");
     }
 })
