@@ -8,7 +8,7 @@ const modal = document.querySelector("#modalImg");
 const primaryImageD = document.querySelector("#primaryImageD");
 const modalCloseButton = document.querySelector("#modalCloseButton");
 
-modalCloseButton.addEventListener("click", () => {    
+modalCloseButton.addEventListener("click", () => {
     if (modal.classList.contains("onOpenFlex")) {
         modal.classList.remove("onOpenFlex");
         modal.classList.add("onClose");
@@ -20,6 +20,22 @@ primaryImageD.addEventListener("click", () => {
         modal.classList.remove("onClose");
         modal.classList.add("onOpenFlex");
     }
+
+    // Functionality to put preview images as the principal in the modal.
+    const scdImgModal = document.querySelectorAll(".scd-img-modal");
+    const priImgModal = document.getElementById('pri-img-modal');
+
+    scdImgModal.forEach(img => {
+        img.addEventListener("click", () => {
+            let style = img.currentStyle || window.getComputedStyle(img, false)
+            let bi = style.backgroundImage.slice(4, -1);
+            let imgSrc = bi.split("images/");
+            let newImgSrc = imgSrc[1].split('-thumbnail');
+            newImgSrc = `images/${newImgSrc[0]}.jpg`;
+            priImgModal.setAttribute('src', newImgSrc)
+        })
+    });
+
 });
 
 // Functionality to put preview images as the principal.
@@ -27,13 +43,13 @@ primaryImageD.addEventListener("click", () => {
 const secondaryImages = document.querySelectorAll(".secondary-img");
 const priImgModal = document.getElementById('pri-img-modal');
 
-secondaryImages.forEach(button => {    
-    button.addEventListener("click", () => {                
-        let src = button.firstChild.getAttribute("src");        
-        src = src.split('-thumbnail');        
-        const newSrc = src[0] + src[1];        
-        primaryImageD.setAttribute("src",newSrc)        
-        priImgModal.setAttribute("src",newSrc)
+secondaryImages.forEach(button => {
+    button.addEventListener("click", () => {
+        let src = button.firstChild.getAttribute("src");
+        src = src.split('-thumbnail');
+        const newSrc = src[0] + src[1];
+        primaryImageD.setAttribute("src", newSrc)
+        priImgModal.setAttribute("src", newSrc)
     })
 });
 
