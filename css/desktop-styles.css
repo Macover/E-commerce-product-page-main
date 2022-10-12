@@ -77,8 +77,8 @@ button{
     cursor: pointer;    
     margin-left: auto;
     background-color: var(--nDrkGrayishBlue); /* defines the background color of the image */
-    mask: url("images/icon-close.svg") no-repeat center / contain;
-    -webkit-mask: url("images/icon-close.svg") no-repeat center / contain;   
+    mask: url("../images/icon-close.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-close.svg") no-repeat center / contain;   
     transition: background-color 0.5s;    
 }
 .modal__close-button:hover{
@@ -92,7 +92,7 @@ button{
     flex-direction: column;    
 }
 .pri-img__img{
-    background: url("images/image-product-1.jpg");
+    background: url("../images/image-product-1.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 1.2em;
@@ -125,12 +125,12 @@ button{
     transition: background-color 0.5s;        
 }
 .left__button{        
-    mask: url("images/icon-previous.svg") no-repeat center / contain;
-    -webkit-mask: url("images/icon-previous.svg") no-repeat center / contain;   
+    mask: url("../images/icon-previous.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-previous.svg") no-repeat center / contain;   
 }
 .right__button{
-    mask: url("images/icon-next.svg") no-repeat center / contain;
-    -webkit-mask: url("images/icon-next.svg") no-repeat center / contain;   
+    mask: url("../images/icon-next.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-next.svg") no-repeat center / contain;   
 }
 .pri-img__buttons-container div:hover > button{    
     background-color: var(--pOrange);
@@ -160,16 +160,16 @@ button{
     filter: contrast(60%);    
 }
 .secondary-img__img1{
-    background: url("images/image-product-1-thumbnail.jpg");    
+    background: url("../images/image-product-1-thumbnail.jpg");    
 }
 .secondary-img__img2{
-    background: url("images/image-product-2-thumbnail.jpg");    
+    background: url("../images/image-product-2-thumbnail.jpg");    
 }
 .secondary-img__img3{
-    background: url("images/image-product-3-thumbnail.jpg");    
+    background: url("../images/image-product-3-thumbnail.jpg");    
 }
 .secondary-img__img4{
-    background: url("images/image-product-4-thumbnail.jpg");    
+    background: url("../images/image-product-4-thumbnail.jpg");    
 }
 
 .container__nav{
@@ -295,8 +295,8 @@ button{
     height: 25px;
     margin: auto;                
     background-color: var(--nDrkGrayishBlue); /* defines the background color of the image */
-    mask: url("images/icon-cart.svg") no-repeat center / contain;
-    -webkit-mask: url("images/icon-cart.svg") no-repeat center / contain;   
+    mask: url("../images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-cart.svg") no-repeat center / contain;   
     transition: background-color 0.5s;    
 }
 .section__cart-button:hover{
@@ -321,7 +321,7 @@ button{
     width: 95%;
     height: 95%;
     border-radius: 100%;
-    background: url("images/image-avatar.png");
+    background: url("../images/image-avatar.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -506,10 +506,10 @@ button{
     transition: filter 1s;
 }
 .input__less-icon i{            
-    background: url("images/icon-minus.svg");
+    background: url("../images/icon-minus.svg");
 }
 .input__plus-icon i{        
-    background: url("images/icon-plus.svg");
+    background: url("../images/icon-plus.svg");
 }
 .input__less-icon i:hover, .input__plus-icon i:hover{    
     filter: brightness(150%);    
@@ -544,8 +544,8 @@ button{
     height: 18px;    
     margin: 0 5px 0 0;
     background-color: var(--nWhite); /* defines the background color of the image */
-    mask: url("images/icon-cart.svg") no-repeat center / contain;
-    -webkit-mask: url("images/icon-cart.svg") no-repeat center / contain;           
+    mask: url("../images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-cart.svg") no-repeat center / contain;           
 }
 .button__cart:hover{
     filter: brightness(120%);

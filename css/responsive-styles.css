@@ -54,7 +54,7 @@
 .responsive-nav__button{
     width: 25px;
     height: 25px;
-    background: url("images/icon-menu.svg");
+    background: url("../images/icon-menu.svg");
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center;
@@ -62,7 +62,7 @@
     outline: none;
 }
 .responsive-nav__logo{
-    background: url("images/logo.svg");
+    background: url("../images/logo.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -94,7 +94,7 @@
 .responsive-nav__cart-button{
     width: 35px;
     height: 35px;
-    background: url("images/icon-cart.svg");
+    background: url("../images/icon-cart.svg");
     background-repeat: no-repeat;
     background-size: fill;
     background-position: center;
@@ -103,7 +103,7 @@
 .responsive-nav__profile-button{
     width: 35px;
     height: 35px;
-    background: url("images/image-avatar.png");    
+    background: url("../images/image-avatar.png");    
     background-repeat: no-repeat;    
     background-size: cover;
     border: none;
@@ -206,7 +206,7 @@
     width: 100%;
     height: 100%;
     grid-row: span 2;
-    background: url("images/image-product-1-thumbnail.jpg");
+    background: url("../images/image-product-1-thumbnail.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -225,7 +225,7 @@
     border: none;
     outline: none;
     grid-row: span 2;    
-    background: url("images/icon-delete.svg");
+    background: url("../images/icon-delete.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -259,7 +259,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background: url("images/image-product-1.jpg");
+    background: url("../images/image-product-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -290,10 +290,10 @@
     border: none;        
 }
 .primary-img__button-left{    
-    background: url("images/icon-previous.svg");
+    background: url("../images/icon-previous.svg");
 }
 .primary-img__button-right{
-    background: url("images/icon-next.svg");
+    background: url("../images/icon-next.svg");
 }
 
 .responsive-info-container{
@@ -372,7 +372,7 @@
     outline: none;
 }
 .input-container__less-button{    
-    background: url("images/icon-minus.svg");
+    background: url("../images/icon-minus.svg");
 }
 .input-container__input{
     background-color: transparent;
@@ -385,7 +385,7 @@
     font-size: 15px;
 }
 .input-container__plus-button{    
-    background: url("images/icon-plus.svg");
+    background: url("../images/icon-plus.svg");
 }
 .info-container__button-cart{
     width: 100%;    
@@ -406,7 +406,7 @@
     color: #fff;
     width: 20px;
     height: 20px;
-    background: url("images/icon-cart.svg");
+    background: url("../images/icon-cart.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -449,7 +449,7 @@
     width: 25px;
     height: 25px;
     margin: auto 10px;
-    background: url("images/icon-close.svg");
+    background: url("../images/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
