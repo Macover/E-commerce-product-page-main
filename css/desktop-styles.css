@@ -469,24 +469,27 @@ button{
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(4, minmax(35px,max-content));
-    grid-template-rows: minmax(30px,max-content);
+    grid-template-rows: minmax(30px,max-content);           
 }
 .section-one__images-container button{            
     border: none;
     outline: none;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: filter .5s;
+    border-radius: .7em;
 }
 .section-one__images-container button img{        
     object-fit: fill;    
     max-width: 80px;
     min-height: 100%;
     border-radius: .7em;
-    transition: all 0.5s;    
+    transition: all 0.5s;        
 }
-.section-one__images-container button:hover{    
-    cursor: pointer;
-    filter: contrast(60%) ;
-    border-radius: .7em;
-    border: 2px solid var(--pOrange);
+.section-one__images-container button:hover{        
+    cursor: pointer;    
+    filter:opacity(70%);
+    border: 1px solid var(--pOrange);
 }
 
 .isSelectedImg{        
