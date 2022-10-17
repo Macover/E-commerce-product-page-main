@@ -531,7 +531,7 @@ button {
 }
 
 .cart-body__des {
-    margin: auto;
+    margin: 50px auto;
     font-size: 16px;
     font-weight: 700;
     color: var(--nDrkGrayishBlue);

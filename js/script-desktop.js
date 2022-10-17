@@ -141,11 +141,26 @@ addToCartButton.addEventListener("click", () => {
 
     notificationCartNumber.textContent = inputNumber.value;
 
-    if (inputNumber.value == 0) {
-        notificationCart.classList.replace("onOpenFlex", "onClose");
-    } else {
+    // Functionality to add items to cart in desktop version
+
+    const dEmptyCart = document.getElementById('dEmptyCart');
+    const dItemCartContainer = document.getElementById('dItemCartContainer');
+    const dCartQuantity = document.getElementById('dCartQuantity')
+    const dCartTotal = document.getElementById('dCartTotal')
+
+    if (inputNumber.value != 0) {
         notificationCart.classList.replace("onClose", "onOpenFlex");
+        dItemCartContainer.classList.replace("onClose", "onOpenFlex");
+        dEmptyCart.classList.replace("onOpenFlex", "onClose");
+        dCartQuantity.textContent = inputNumber.value;
+        let total = 125 * inputNumber.value;
+        dCartTotal.textContent = `$${total}`
+    }else{
+        notificationCart.classList.replace("onOpenFlex", "onClose");
+        dItemCartContainer.classList.replace("onOpenFlex", "onClose");
+        dEmptyCart.classList.replace("onClose", "onOpenFlex");
     }
+    
 })
 
 
