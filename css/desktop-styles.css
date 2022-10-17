@@ -400,7 +400,7 @@ button {
 }
 
 .onOpenFlex {
-    display: flex;
+    display: flex;    
 }
 
 .onClose {
@@ -456,7 +456,10 @@ button {
 .card-cart__body {
     flex-grow: 5;
     display: flex;
+    min-width: 350px;
+    min-height: 150px;
     padding: 20px 15px;
+    position: relative;    
 }
 
 .cart__items-cart-container {
@@ -466,6 +469,37 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+}
+
+.items-remove-desktop-animated{            
+    animation-name: itemDesktopDeleteAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: 1;    
+    animation-fill-mode: forwards;    
+}
+
+@keyframes itemDesktopDeleteAnimation {
+    0%{                
+        opacity: 1;
+    }
+    25%{                
+        opacity: .75;
+    }
+    50%{                
+        opacity: .50;        
+    }
+    75%{                
+        opacity: .25;
+    }
+    100%{
+        left: 50%;        
+        opacity: 0;           
+    }
+    
 }
 
 .items-cart__button {
@@ -531,9 +565,12 @@ button {
 }
 
 .cart-body__des {
-    margin: 50px auto;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    position: absolute;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700;    
     color: var(--nDrkGrayishBlue);
 }
 

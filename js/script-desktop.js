@@ -155,12 +155,26 @@ addToCartButton.addEventListener("click", () => {
         dCartQuantity.textContent = inputNumber.value;
         let total = 125 * inputNumber.value;
         dCartTotal.textContent = `$${total}`
-    }else{
+    } else {
         notificationCart.classList.replace("onOpenFlex", "onClose");
         dItemCartContainer.classList.replace("onOpenFlex", "onClose");
         dEmptyCart.classList.replace("onClose", "onOpenFlex");
     }
-    
+
+    //Functionality to remove an item from the cart
+    const dCartTrashButton = document.getElementById('dCartTrashButton');
+
+    dCartTrashButton.addEventListener("click", () => {
+        notificationCart.classList.replace("onOpenFlex", "onClose");
+        dItemCartContainer.classList.add("items-remove-desktop-animated");
+        setTimeout(() => {
+            dItemCartContainer.classList.replace("onOpenFlex", "onClose");
+            dItemCartContainer.classList.remove("items-remove-desktop-animated");            
+            dEmptyCart.classList.replace("onClose", "onOpenFlex");
+        }, 1500);
+        
+    })
+
 })
 
 
