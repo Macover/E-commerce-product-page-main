@@ -35,8 +35,45 @@ primaryImageD.addEventListener("click", () => {
             priImgModal.setAttribute('src', newImgSrc)
         })
     });
-
 });
+
+//Functionality to change image through the arrows.
+
+const desktopLeftButton = document.getElementById('desktopLeftButton');
+const desktopRightButton = document.getElementById('desktopRightButton');
+
+const changeImage = mode => {
+    const currentPrincipalImage = document.getElementById('pri-img-modal');
+    const srcImage = currentPrincipalImage.getAttribute('src');
+    let currentNumber = srcImage.split('-')
+    currentNumber = currentNumber[2].split('.');
+    currentNumber = Number(currentNumber[0]);
+    let newImgSrc = `../images/image-product-1.jpg`
+
+    if (mode === 'increment') {
+        if (!(currentNumber >= 4)) {
+            currentNumber++;
+        } else {
+            currentNumber = 1;
+        }
+    }
+    if (mode === 'decrement') {
+        if (currentNumber > 1) {
+            currentNumber--;
+        } else {
+            currentNumber = 4;
+        }
+    }
+    newImgSrc = `../images/image-product-${currentNumber}.jpg`
+    priImgModal.setAttribute('src', newImgSrc)
+}
+
+desktopRightButton.addEventListener("click", () => {
+    changeImage('increment');
+})
+desktopLeftButton.addEventListener("click", () => {
+    changeImage('decrement');
+})
 
 // Functionality to put preview images as the principal.
 
