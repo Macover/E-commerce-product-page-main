@@ -73,7 +73,13 @@ btnSideBarClose.addEventListener("click",()=>closeSideBar());
 resSidebarBackTap.addEventListener("click",()=>closeSideBar());
 
 
-mobCartButton.addEventListener("click", ()=>{       
+mobCartButton.addEventListener("click", ()=>{
+    
+    if (mobCartButton.style.backgroundColor != "var(--nBlack)") {
+        mobCartButton.style.backgroundColor = "var(--nBlack)"
+    } else {
+        mobCartButton.style.backgroundColor = "var(--nDrkGrayishBlue)"
+    }
    
    if(cartCard.classList.contains("onClose")){
        cartCard.classList.toggle("isOpen");

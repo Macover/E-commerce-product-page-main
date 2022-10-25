@@ -92,13 +92,14 @@
     right: 3px;
 }
 .responsive-nav__cart-button{
-    width: 35px;
-    height: 35px;
-    background: url("../images/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-position: center;
+    width: 25px;
+    height: 25px;
     border: none;    
+    background-color: var(--nDrkGrayishBlue);
+    /* defines the background color of the image */
+    mask: url("../images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-cart.svg") no-repeat center / contain;
+    transition: background-color 0.5s;
 }
 .responsive-nav__profile-button{
     width: 35px;
