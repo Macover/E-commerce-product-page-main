@@ -48,7 +48,7 @@ const changeImage = mode => {
     let currentNumber = srcImage.split('-')
     currentNumber = currentNumber[2].split('.');
     currentNumber = Number(currentNumber[0]);
-    let newImgSrc = `../images/image-product-1.jpg`
+    let newImgSrc = `images/image-product-1.jpg`
 
     if (mode === 'increment') {
         if (!(currentNumber >= 4)) {

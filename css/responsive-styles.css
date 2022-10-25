@@ -343,6 +343,8 @@
     position: absolute;
     top: 0;
     box-sizing: border-box;
+    object-fit:cover;
+    object-position: center;
 
     /* ANIMATION */
     animation-timing-function: ease;
