@@ -403,14 +403,15 @@
     gap: 0 8px;
 }
 .button-cart__icon{    
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    background: url("../images/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px 0 0;
+    background-color: var(--nWhite);
+    /* defines the background color of the image */
+    mask: url("../images/icon-cart.svg") no-repeat center / contain;
+    -webkit-mask: url("../images/icon-cart.svg") no-repeat center / contain;    
 }
+
 
 .responsive__sidebar-background{
     background-color: rgba(10, 10, 10, 80%);
