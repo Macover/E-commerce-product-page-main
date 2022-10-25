@@ -28,7 +28,7 @@ button {
 @media (min-width: 840px) {
     .desktop-mode {
         height: 100vh;
-        display: flex;
+        display: flex;        
         flex-direction: column;
     }
 
@@ -394,6 +394,7 @@ button {
     max-height: max-content;
     padding: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: center;
     position: relative;
@@ -575,6 +576,7 @@ button {
 }
 
 .container__section-one {
+    min-width: 500px;
     max-width: 40%;
     display: flex;
     justify-content: center;
@@ -634,6 +636,7 @@ button {
 }
 
 .container__section-two {
+    min-width: 300px;
     max-width: 30%;
     max-height: max-content;
     padding: 10px;
