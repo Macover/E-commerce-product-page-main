@@ -64,7 +64,7 @@ const changeImage = mode => {
             currentNumber = 4;
         }
     }
-    newImgSrc = `../images/image-product-${currentNumber}.jpg`
+    newImgSrc = `images/image-product-${currentNumber}.jpg`
     priImgModal.setAttribute('src', newImgSrc)
 }
 
